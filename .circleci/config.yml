@@ -10,6 +10,7 @@ jobs:
             virtualenv venv
             . venv/bin/activate
             python --version
+            pip install numpy
             python test_hello.py
   py3job:
     docker:
@@ -21,6 +22,7 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             python --version
+            pip install numpy
             python test_hello.py
 workflows:
   version: 2
