@@ -5,5 +5,8 @@ class TestHello(unittest.TestCase):
     def test_hello(self):
         self.assertEqual('hello Mikko', hello('Mikko'))
 
+    def test_hello2(self):
+        self.assertTrue(False)
+
 if __name__ == '__main__':
     unittest.main()
