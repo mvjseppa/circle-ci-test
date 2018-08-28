@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           command: |
-            python -m venv venv
+            virtualenv venv
             . venv/bin/activate
             python --version
             python test_hello.py
