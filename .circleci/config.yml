@@ -1,13 +1,13 @@
 version: 2
 jobs:
-  one:
+  py2job:
     docker:
       - image: circleci/python:2.7.14
     steps:
       - checkout
       - run: echo "A first hello"
       - run: sleep 6
-  two:
+  py3job:
     docker:
       - image: circleci/python:3.7.0
     steps:
@@ -16,7 +16,7 @@ jobs:
       - run: sleep 5
 workflows:
   version: 2
-  one_and_two:
+  py2_and_py3:
     jobs:
-      - one
-      - two
+      - py2job
+      - py3job
