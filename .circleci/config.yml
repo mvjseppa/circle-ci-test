@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python:3.6.0
+      - image: circleci/3.7.0-stretch-browsers
     steps:
       - checkout
       - run: echo "A first hello"
