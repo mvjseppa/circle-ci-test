@@ -2,18 +2,18 @@ version: 2
 jobs:
   one:
     docker:
-      - image: circleci/ruby:2.4.1
+      - image: circleci/python:2.7.14
     steps:
       - checkout
       - run: echo "A first hello"
-      - run: sleep 25
+      - run: sleep 6
   two:
     docker:
-      - image: circleci/ruby:2.4.1
+      - image: circleci/python:3.7.0
     steps:
       - checkout
       - run: echo "A more familiar hi"
-      - run: sleep 15
+      - run: sleep 5
 workflows:
   version: 2
   one_and_two:
