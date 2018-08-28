@@ -5,15 +5,18 @@ jobs:
       - image: circleci/python:2.7.14
     steps:
       - checkout
-      - run: echo "A first hello"
-      - run: sleep 6
+      - run:
+          command: python test_hello.py
   py3job:
     docker:
       - image: circleci/python:3.7.0
     steps:
       - checkout
-      - run: echo "A more familiar hi"
-      - run: sleep 5
+      - run:
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            python test_hello.py
 workflows:
   version: 2
   py2_and_py3:
